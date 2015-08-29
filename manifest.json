@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
-  "name": "Сортуй петиції за кількістю голосів!",
-  "version": "1.1.1",
+  "name": "Сортуй та фільтруй петиції!",
+  "version": "1.1.2",
 
-  "description": "Сортуй петиції за кількістю голосів!",
+  "description": "Сортуй петиції за кількістю голосів! A також фільтруй!",
   "homepage_url": "https://www.facebook.com/ilya.muromec/posts/942346189137738?comment_id=942391415799882&reply_comment_id=942525949119762&total_comments=5&comment_tracking=%7B%22tn%22%3A%22R%22%7D",
   "minimum_chrome_version": "22",
 
