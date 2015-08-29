@@ -7,7 +7,7 @@
     var sort = function sort() {
       $(listContainerSelector + " > .list_row").sort(function(a, b) {
         function getVotes(el) {
-          return parseInt($(el).find('span').text())
+          return parseInt($(el).find('.list_elem_vote > span').text())
         };
         if (getVotes(a) > getVotes(b)) {
           return -1;
