@@ -16,8 +16,8 @@
     }).appendTo(listContainerSelector);
     // filtering
     $(".txt_input").bind('input', function(ev) {
+      $(listContainerSelector + " > .list_row").css('display', 'table-row');
       if(ev.target.value.length > 2) {
-        $(listContainerSelector + " > .list_row").css('display', 'table-row');
         $(listContainerSelector + " > .list_row").filter(function(index, el) {
           return !($(el).find('a').text().toLowerCase()
                    .includes(ev.target.value.toLowerCase()));
