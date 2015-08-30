@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/Vanuan/petition-sorted/issues"
   },
-  "homepage": "https://github.com/Vanuan/petition-sorted#readme"
+  "homepage": "https://github.com/Vanuan/petition-sorted#readme",
+  "dependencies": {
+    "cheerio": "^0.19.0",
+    "request-then": "^1.1.0"
+  }
 }
