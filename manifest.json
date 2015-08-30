@@ -11,6 +11,7 @@
     {
       "matches": ["https://petition.president.gov.ua/petition/archive",
         "https://petition.president.gov.ua/?status=*",
+        "https://petition.president.gov.ua/search?text=*",
         "https://petition.president.gov.ua/"
       ],
       "js": ["injectedscript.js", "contentscript.js"],
