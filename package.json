@@ -1,0 +1,20 @@
+{
+  "name": "petition-sorted",
+  "version": "1.0.0",
+  "description": "Utitilies for President of Ukraine petition website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-chrome": "mkdir -p build; rm -f build/*; zip -j build/petition-sorted.zip extension/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vanuan/petition-sorted.git"
+  },
+  "author": "Vanuan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Vanuan/petition-sorted/issues"
+  },
+  "homepage": "https://github.com/Vanuan/petition-sorted#readme"
+}
