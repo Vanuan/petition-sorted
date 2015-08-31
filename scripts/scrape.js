@@ -1,4 +1,3 @@
-var fs = require('fs');
 var cheerio = require('cheerio');
 var request = require('request-then');
 
@@ -25,18 +24,18 @@ function parseError(err) {
   console.log(err);
 }
 
-function write(json) {
-  console.log("Writing...");
+function write(json, destination) {
+  console.log("Writing to " + destination + "...");
   fs.writeFileSync(destination, JSON.stringify(json), 'utf8')
   console.log("Written to " + destination);
+  return json;
 }
 
 function writeError(err) {
   console.log(err);
 }
 
-var url = 'https://petition.president.gov.ua/?status=active';
-var destination = 'data/petitions.json';
-
-console.log("Fetching...")
-request(url).then(parse, parseError).then(write, writeError);
+module.exports = function scrape(url) {
+  console.log("Fetching...")
+  return request(url).then(parse, parseError);
+};
