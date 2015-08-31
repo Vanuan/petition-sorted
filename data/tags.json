@@ -11,11 +11,11 @@
 "зовнішня політика":{"matchStrings":["дипломат"," НАТО"],"matchIds":[504,106]},
 "збройні сили":{"matchStrings":["армія","війско"],"matchIds":[504]},
 "економіка":{"matchStrings":["імпорт","електромоб"],"matchIds":[]},
-"податки":{"matchStrings":["податк","акциз"],"matchIds":[]},
+"податки":{"matchStrings":["податк","акциз"," мито ", " мита"],"matchIds":[]},
 "інвестиції":{"matchStrings":[],"matchIds":[723]},
 "вибори":{"matchStrings":["вибор"],"matchIds":[534]},
 "інфраструктура":{"matchStrings":["дорог","доріг"],"matchIds":[97]},
-"прозорість":{"matchStrings":["прозоро","prozorro"],"matchIds":[532,128]},
+"прозорість":{"matchStrings":["прозоро","prozorro","оприлюдн"],"matchIds":[532,128,725]},
 "релігія":{"matchStrings":[" УПЦ ", "церкв"], "matchIds":[]},
 "українізація":{"matchStrings":[],"matchIds":[351,319,252]}
 }

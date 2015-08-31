@@ -24,7 +24,6 @@
         });
         if(!matched) {
           matched = tags[tagName].matchIds.some(function(matchId) {
-            if(petition.id == 40) {console.log(petition.id); console.log(tagName)}
             return matchId == petition.id;
           });
         }
