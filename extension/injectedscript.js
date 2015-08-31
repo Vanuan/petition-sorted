@@ -2,6 +2,7 @@
   'use strict';
 
   window.injectedScript = function injectedScript() {
+    var PETITION_ID_REGEXP = new RegExp(/\/petition\/(\d+)/);
     var addStyle = function addStyle(css) {
       var head = document.head || document.getElementsByTagName('head')[0],
           style = document.createElement('style');
@@ -14,12 +15,19 @@
       head.appendChild(style);
     };
 
-    var addTag = function tag(petitionTitle, tags) {
+    var addTag = function tag(petition, tags) {
       var matchedTags = [];
       Object.keys(tags).forEach(function (tagName) {
         var matched = tags[tagName].matchStrings.some(function(matchString) {
-          return petitionTitle.toLowerCase().includes(matchString.toLowerCase());
+          var title = petition.title.toLowerCase().replace(/i/g,'і'); // latin to ukr
+          return title.includes(matchString.toLowerCase());
         });
+        if(!matched) {
+          matched = tags[tagName].matchIds.some(function(matchId) {
+            if(petition.id == 40) {console.log(petition.id); console.log(tagName)}
+            return matchId == petition.id;
+          });
+        }
         if(matched) {
           matchedTags.push(tagName);
         };
@@ -60,7 +68,8 @@
     ).then(function(tags) {
       $(listContainerSelector + "> .list_row").each(function() {
         var petitionTitle = $(this).find('a').text();
-        var newTags = addTag(petitionTitle, tags);
+        var petitionId = parseInt(PETITION_ID_REGEXP.exec($(this).find('a').attr('href'))[1]);
+        var newTags = addTag({title: petitionTitle, id: petitionId}, tags);
         newTags.forEach(function(newTag) {
           $('<span class="tag">' + newTag + '</span>').appendTo($(this).find(".list_elem_title h2"));
         }.bind(this));
@@ -71,5 +80,5 @@
                "  padding: 5px;" +
                "  border-radius: 3px; }");
     });
-  }
+  };
 })();
