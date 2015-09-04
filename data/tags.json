@@ -17,5 +17,6 @@
 "інфраструктура":{"matchStrings":["дорог","доріг"],"matchIds":[97]},
 "прозорість":{"matchStrings":["прозоро","prozorro","оприлюдн"],"matchIds":[532,128,725]},
 "релігія":{"matchStrings":[" УПЦ ", "церкв"], "matchIds":[]},
-"українізація":{"matchStrings":[],"matchIds":[351,319,252]}
+"українізація":{"matchStrings":[],"matchIds":[351,319,252]},
+"Саакашвілі":{"matchStrings":["саакашвілі","саакашвили"],"matchIds":[]}
 }
